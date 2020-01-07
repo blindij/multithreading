@@ -9,3 +9,14 @@ target_link_libraries(example.x
    PUBLIC
       OpenMP::OpenMP_CXX
       )
+
+# Print out the properties of OpenMP::OpenMP_CXX
+include(CMakePrintHelpers)
+cmake_print_properties(
+   TARGETS
+      OpenMP::OpenMP_CXX
+   PROPERTIES
+      INTERFACE_COMPILE_OPTIONS
+      INTERFACE_INCLUDE_DIRECTORIES
+      INTERFACE_LINK_LIBRARIES
+)
